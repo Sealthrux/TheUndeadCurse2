@@ -28,7 +28,8 @@ Transform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: -5.9617006e-10, y: 0.57751864, z: 8.586136e-10, w: 0.8163775}
   m_LocalPosition: {x: 47.483, y: 1.988, z: 49.938}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 40, z: 20}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
