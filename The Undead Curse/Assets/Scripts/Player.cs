@@ -6,8 +6,6 @@ using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
-    private bool checkpointReached = false;
     CharacterController characterController; //Componente que controla o jogador
     Animator animator;
 
@@ -60,14 +58,5 @@ public class Player : MonoBehaviour
             // Move the controller
             characterController.Move(moveDirection * Time.deltaTime);
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("CaveCheck") && !checkpointReached)
-        {
-            checkpointReached = true;
-            videoPlayer.Play();
-        }
     }
 }
