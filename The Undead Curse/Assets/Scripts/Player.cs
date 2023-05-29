@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     public float speed = 6.0f; //Velocidade de movimento, definível no Inspector
     public float jumpSpeed = 8.0f; //Velocidade de salto, definível no Inspector
     public float gravity = 0f; //Gravidade, definível no Inspector
+    float mouseX;
+    float mouseY;
+    public float sensitivity;
+    public Camera eyes;
 
     private Vector3 moveDirection = Vector3.zero; //Vector que controla a direcção do movimento
     // Start is called before the first frame update
@@ -24,6 +28,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
+        eyes.transform.Rotate(-mouseY*sensitivity, 0, 0);
+        transform.Rotate(0, mouseX*sensitivity, 0);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+
         if (characterController.isGrounded) //Se a personagem estiver no chão
             {
             // We are grounded, so recalculate
