@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -16,12 +17,12 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name=="CheckPoint"&&checkpointplayed==false)
+        if (other.gameObject.name == "CheckPoint" && checkpointplayed == false)
         {
-            checkpointplayed=true;
+            checkpointplayed = true;
             PlayerCam.SetActive(false);
             CheckPointCam.SetActive(true);
-            Invoke("SwitchToPlayerCam",6f);
+            Invoke("SwitchToPlayerCam", 6f);
         }
     }
 
@@ -29,5 +30,6 @@ public class Checkpoint : MonoBehaviour
     {
         PlayerCam.SetActive(true);
         CheckPointCam.SetActive(false);
+        SceneManager.LoadScene("Menu");
     }
 }
