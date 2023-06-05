@@ -38,6 +38,14 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
 
+           
+        if (Input.GetMouseButtonDown(0)) // Verifica se o botão esquerdo do mouse foi clicado
+        {
+            //animator.SetTrigger("Z_Attack"); // Aciona o gatilho "Ataque" na animação
+            animator.Play("Z_Attack");
+        }
+
+
 
         if (characterController.isGrounded) //Se a personagem estiver no chão
         {
@@ -56,15 +64,6 @@ public class Player : MonoBehaviour
             animator.SetFloat("Speed", movementMagnitude); // Define o parâmetro "Speed" do Animator
 
             // Verifica se o personagem está parado (magnitude do movimento próxima de zero)
-            if (movementMagnitude < 0.1f)
-            {
-                animator.SetBool("Z_Walk_InPlace", false); // Define o parâmetro bool "Z_Walking_InPlace" como falso
-            }
-            else
-            {
-                animator.SetBool("Z_Walk_InPlace", true); // Define o parâmetro bool "Z_Walking_InPlace" como verdadeiro
-            }
-
             moveDirection = transform.TransformDirection(moveDirection);
         }
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
