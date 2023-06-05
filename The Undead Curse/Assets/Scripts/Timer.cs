@@ -6,12 +6,13 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public float TstartTime = 120.0f; // Tempo inicial em segundos
-    public Color redColor = Color.red; // Cor dos números durante os últimos 30 segundos
+    public Color redColor = Color.red; // Cor dos nï¿½meros durante os ï¿½ltimos 30 segundos
     public GameObject DeathMenu;
 
     public TMP_Text TminutesText;
     public TMP_Text TsecondsText;
     public float TcurrentTime;
+    public GameObject CheckPoint;
 
     public void Start()
     {
@@ -30,7 +31,7 @@ public class Timer : MonoBehaviour
             // Atualiza os objetos de texto com os valores do timer
             TminutesText.text = Mathf.Floor(TcurrentTime / 60).ToString("0");
             TsecondsText.text = Mathf.Floor(TcurrentTime % 60).ToString("00");
-            // Muda a cor dos números para vermelho nos últimos 30 segundos
+            // Muda a cor dos nï¿½meros para vermelho nos ï¿½ltimos 30 segundos
             if (TcurrentTime <= 30)
             {
                 TminutesText.color = redColor;
@@ -39,6 +40,11 @@ public class Timer : MonoBehaviour
         else
         {
             DeathMenu.SetActive(true);
+        }
+
+        if(TcurrentTime <= 30)
+        {
+            CheckPoint.SetActive(true);
         }
     }
 }
