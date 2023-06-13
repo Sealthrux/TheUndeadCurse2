@@ -23,7 +23,7 @@ public class Objective : MonoBehaviour
         string sceneName = currentScene.name;
 
 
-        Text1 = "Consume"+ ObjectiveNum + "human meat";
+        Text1 = "Consume "+ ObjectiveNum + " human meat";
         Text2 = CurrentObjectiveNum + "/" + ObjectiveNum;
 
         ObjectiveText.text = Text1;
