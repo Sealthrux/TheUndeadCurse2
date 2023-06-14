@@ -7,12 +7,11 @@ public class Timer : MonoBehaviour
 {
     public float TstartTime = 120.0f; // Tempo inicial em segundos
     public Color redColor = Color.red; // Cor dos n�meros durante os �ltimos 30 segundos
-    public GameObject DeathMenu;
 
     public TMP_Text TminutesText;
     public TMP_Text TsecondsText;
     public float TcurrentTime;
-    public GameObject CheckPoint;
+    
 
     public void Start()
     {
@@ -35,13 +34,9 @@ public class Timer : MonoBehaviour
             if (TcurrentTime <= 30)
             {
                 TminutesText.color = redColor;
-                TsecondsText.color = redColor;            }
+                TsecondsText.color = redColor;            
+            }
         }
-        else
-        {
-            DeathMenu.SetActive(true);
-        }
-
         
     }
 
@@ -50,6 +45,16 @@ public class Timer : MonoBehaviour
         if (TcurrentTime <= 60)
         {
             return true;
+        }
+        else { return false; }
+    }
+
+    public bool TimerDeath()
+    {
+        if (TcurrentTime <= 0) 
+        {
+            return true;
+           
         }
         else { return false; }
     }

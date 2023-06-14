@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour
         {
             CheckPoint.gameObject.SetActive(true);
         }
+
+        if (TimerScript.TimerDeath() == true)
+        {
+            MyHUD.LifesTimerDeath();
+        }
     }
 
 }

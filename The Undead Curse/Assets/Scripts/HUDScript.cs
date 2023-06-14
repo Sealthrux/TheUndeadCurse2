@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class HUDScript : MonoBehaviour
 {
     [SerializeField]
-    public int lifes = 10;
+    public int lives = 10;
 
-    [SerializeField]
-    List<Image> vidas = new List<Image>();
-
+    public GameObject HEALTHBAR;
+    public GameObject HPBarPrefab;
+    public GameObject DeathMenu;
 
     void Start()
     {
@@ -21,19 +21,51 @@ public class HUDScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        HPBarUpdate();
+
+        if (lives == 0)
+        {
+            DeathMenu.SetActive(true);
+        }
     }
 
     public void LifeMax()
     {
-        if (lifes >= 10)
+        if (lives >= 10)
         {
-            lifes = 10;
+            lives = 10;
         }
 
         else
         {
-            lifes++;
+            lives++;
         }
+    }
+
+    public void HPBarUpdate()
+    {
+        if ( HEALTHBAR.transform.childCount > lives)
+        {
+            float healthtemp = HEALTHBAR.transform.childCount - lives;
+            
+            for (int i = 0; i < healthtemp; i++)
+            {
+                GameObject.Destroy(HEALTHBAR.transform.GetChild(HEALTHBAR.transform.childCount - i - 1).gameObject);
+            }
+        }
+        else if (HEALTHBAR.transform.childCount < lives) 
+        {
+            float healthtemp2 = lives - HEALTHBAR.transform.childCount;
+
+            for (int i = 0; i < healthtemp2; i++)
+            {
+                GameObject.Instantiate(HPBarPrefab, HEALTHBAR.transform);
+            }
+        }
+    }
+
+    public void LifesTimerDeath()
+    {
+        lives = 0;
     }
 }
