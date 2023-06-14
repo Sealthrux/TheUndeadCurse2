@@ -42,9 +42,15 @@ public class Timer : MonoBehaviour
             DeathMenu.SetActive(true);
         }
 
-        if(TcurrentTime <= 30)
+        
+    }
+
+    public bool TimerCheck()
+    {
+        if (TcurrentTime <= 60)
         {
-            CheckPoint.SetActive(true);
+            return true;
         }
+        else { return false; }
     }
 }

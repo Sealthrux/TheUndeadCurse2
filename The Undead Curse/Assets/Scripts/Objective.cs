@@ -10,32 +10,45 @@ public class Objective : MonoBehaviour
     public string Text2;
     public TMP_Text ObjectiveText;
     public TMP_Text ObjectiveCounter;
-    public float ObjectiveNum;
-    public float CurrentObjectiveNum = 0;
+    public float MaxObjective;
+    public float CurrentObjective = 0;
 
 
     public void Start()
     {
-        // Create a temporary reference to the current scene.
-        Scene currentScene = SceneManager.GetActiveScene();
+        
 
-        // Retrieve the name of this scene.
-        string sceneName = currentScene.name;
-
-
-        Text1 = "Consume "+ ObjectiveNum + " human meat";
-        Text2 = CurrentObjectiveNum + "/" + ObjectiveNum;
-
-        ObjectiveText.text = Text1;
-        ObjectiveCounter.text = Text2;
-
-        if (sceneName == "MainScene")
-        {
-            ObjectiveNum = 3;
-        }
     }
     public void Update()
     {
+
+        Text1 = "Consume " + MaxObjective + " human meat";
+        Text2 = CurrentObjective + "/" + MaxObjective;
+
+        ObjectiveText.text = Text1;
+        ObjectiveCounter.text = Text2;
+    }
+
+    public void ObjectiveCheckpoint()
+    {
         
+        if (CurrentObjective >= MaxObjective) 
+        {
+            CurrentObjective = MaxObjective;
+        }
+
+        else
+        {
+            CurrentObjective++;
+        }
+    }
+
+    public bool ObjectiveComplete()
+    {
+        if (CurrentObjective >= MaxObjective)
+        {
+            return true;
+        }
+        else return false;
     }
 }

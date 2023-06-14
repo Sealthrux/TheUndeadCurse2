@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 3409376867404956394}
   - component: {fileID: 512797422109562754}
   - component: {fileID: 7705317855537843900}
+  - component: {fileID: 2703938005994598861}
   m_Layer: 0
   m_Name: meatAndBone
   m_TagString: Untagged
@@ -312,6 +313,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2703938005994598861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601772848241121360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98249760358017e4f90d3cfb2c2624c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3215331411537904303
 GameObject:
   m_ObjectHideFlags: 0

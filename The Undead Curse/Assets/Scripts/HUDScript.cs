@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HUDScript : MonoBehaviour
 {
     [SerializeField]
-    private int lifes = 10;
+    public int lifes = 10;
 
     [SerializeField]
     List<Image> vidas = new List<Image>();
@@ -22,5 +22,18 @@ public class HUDScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LifeMax()
+    {
+        if (lifes >= 10)
+        {
+            lifes = 10;
+        }
+
+        else
+        {
+            lifes++;
+        }
     }
 }
