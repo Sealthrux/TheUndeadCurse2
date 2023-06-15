@@ -18,7 +18,6 @@ public class Timer : MonoBehaviour
         TminutesText = transform.Find("Minutes").GetComponent<TMP_Text>();
         TsecondsText = transform.Find("Seconds").GetComponent<TMP_Text>();
 
-        TcurrentTime = TstartTime;
     }
 
     public void Update()
@@ -31,10 +30,15 @@ public class Timer : MonoBehaviour
             TminutesText.text = Mathf.Floor(TcurrentTime / 60).ToString("0");
             TsecondsText.text = Mathf.Floor(TcurrentTime % 60).ToString("00");
             // Muda a cor dos n�meros para vermelho nos �ltimos 30 segundos
-            if (TcurrentTime <= 30)
+            if (TcurrentTime <= TstartTime)
             {
                 TminutesText.color = redColor;
                 TsecondsText.color = redColor;            
+            }
+
+            if (TcurrentTime <= 0)
+            {
+                TcurrentTime = 0;
             }
         }
         
