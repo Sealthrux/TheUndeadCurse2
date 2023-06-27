@@ -11797,6 +11797,7 @@ GameObject:
   - component: {fileID: 7282998063102424533}
   - component: {fileID: 4025092848389873338}
   - component: {fileID: 6840915076207852370}
+  - component: {fileID: 7888002901615743403}
   m_Layer: 0
   m_Name: Crusader tank_prefab
   m_TagString: Untagged
@@ -11908,10 +11909,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd03abdbc1c1c244b6ece22d7fd1e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: -20
+  health: -200
   attack: 1
   critDamage: 1.5
   critChance: 0.5
+--- !u!114 &7888002901615743403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949430161825482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4970e4e347199647b6f5095bcf1f54e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1953607639529104
 GameObject:
   m_ObjectHideFlags: 0
