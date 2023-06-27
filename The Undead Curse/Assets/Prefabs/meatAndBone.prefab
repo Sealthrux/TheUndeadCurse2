@@ -192,9 +192,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2601772848241121360}
-  m_LocalRotation: {x: 0.01877335, y: 0.99504375, z: -0.0070841885, w: -0.097392954}
+  m_LocalRotation: {x: -0.018770574, y: -0.9950438, z: 0.0070816977, w: 0.097393185}
   m_LocalPosition: {x: 827.5, y: 499, z: 1848.2}
-  m_LocalScale: {x: 150, y: 150, z: 150}
+  m_LocalScale: {x: 74.999985, y: 150, z: 74.999985}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7752703811851085137}
@@ -203,7 +203,7 @@ Transform:
   - {fileID: 1374883433713375141}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.598, y: -168.808, z: 2.22}
 --- !u!65 &512797422109562754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 170
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
