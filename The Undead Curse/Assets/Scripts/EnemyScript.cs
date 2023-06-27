@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.instance.TakeDamagePlayer();
         }
