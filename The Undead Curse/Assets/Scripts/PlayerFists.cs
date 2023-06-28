@@ -6,6 +6,10 @@ public class PlayerFists : MonoBehaviour
 {
     public bool deuDano = false;
 
+    private void Awake()
+    {
+        GetComponent<SphereCollider>().enabled = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -731,6 +731,7 @@ GameObject:
   - component: {fileID: 6917293626563968900}
   - component: {fileID: 6877178453188185701}
   - component: {fileID: 4684355457475717507}
+  - component: {fileID: 5201830008173794244}
   m_Layer: 0
   m_Name: Z_L_ArmPalm
   m_TagString: Untagged
@@ -836,6 +837,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!135 &5201830008173794244
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234868044983273263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: -0.62525517, y: -0.040961176, z: 1.1071147}
 --- !u!1 &3251893159264145394
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +996,7 @@ GameObject:
   - component: {fileID: 5037301856396861591}
   - component: {fileID: 4218644454570579036}
   - component: {fileID: 4684355458469762594}
+  - component: {fileID: 5435758996287678362}
   m_Layer: 0
   m_Name: Z_R_ArmPalm
   m_TagString: Untagged
@@ -1087,6 +1102,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!135 &5435758996287678362
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562854070048727097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0.62524027, y: -0.040961727, z: 1.1071155}
 --- !u!1 &3581535390494476747
 GameObject:
   m_ObjectHideFlags: 0

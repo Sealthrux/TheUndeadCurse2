@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    private void Awake()
+    {
+        GetComponent<SphereCollider>().enabled = false;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
