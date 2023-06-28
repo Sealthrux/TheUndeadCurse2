@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,15 @@ public class Player : MonoBehaviour
     public Camera eyes;
 
     private Vector3 moveDirection = Vector3.zero; //Vector que controla a direcção do movimento
+
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            other.GetComponent<AttributesManager>().TakeDamage(attack);
+        }
+    }*/
+
     // Start is called before the first frame update
     void Start()
     {

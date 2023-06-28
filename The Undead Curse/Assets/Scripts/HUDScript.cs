@@ -68,4 +68,9 @@ public class HUDScript : MonoBehaviour
     {
         lives = 0;
     }
+
+    public void TakeDamage()
+    {
+        lives--;
+    }
 }
