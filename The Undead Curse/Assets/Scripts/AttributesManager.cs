@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class AttributesManager : MonoBehaviour
 {
-    public int health = 100;
-    public int attack;
+    private int health = 4;
     public void TakeDamage(int amount)
     {
         health -= amount;
@@ -17,20 +16,12 @@ public class AttributesManager : MonoBehaviour
         }
     }
 
+
     private void Disappear()
     {
         // Desativa o GameObject
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
-    public void DealDamage(GameObject target)
-    {
-        var atm = target.GetComponent<AttributesManager>();
-        if (atm != null)
-        {
-            float totalDamage = attack;
-
-            atm.TakeDamage((int)totalDamage);
-        }
-    }
+  
 }

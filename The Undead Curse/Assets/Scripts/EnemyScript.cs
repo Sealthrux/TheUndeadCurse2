@@ -5,11 +5,27 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void Awake()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        GetComponent<SphereCollider>().enabled = false;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
             GameManager.instance.TakeDamagePlayer();
         }
+    }
+
+    private void AttackTriggerOn()
+    {
+        GetComponent<SphereCollider>().enabled = true;
+
+    }
+
+    private void AttackTriggerOff()
+    {
+        GetComponent<SphereCollider>().enabled = false;
+
     }
 }
