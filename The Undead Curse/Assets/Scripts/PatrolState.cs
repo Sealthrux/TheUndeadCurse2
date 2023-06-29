@@ -9,13 +9,18 @@ public class PatrolState : StateMachineBehaviour
     List<Transform> wayPoints = new List<Transform>();
     NavMeshAgent agent;
 
+    Transform player;
+    float chaseRange = 40;
+
     override public void OnStateEnter(
         Animator animator,
         AnimatorStateInfo stateInfo,
         int layerIndex
     )
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
+        agent.speed = 5.5f;
         timer = 0;
         GameObject go = GameObject.FindGameObjectWithTag("WayPoints");
         foreach (Transform t in go.transform)
@@ -34,8 +39,15 @@ public class PatrolState : StateMachineBehaviour
             agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
 
         timer += Time.deltaTime;
-        if (timer > 10)
+        if (timer > 5)
             animator.SetBool("isPatrolling", false);
+
+        float distance = Vector3.Distance(player.position, animator.transform.position);
+        if (distance < chaseRange)
+        {
+            animator.SetBool("isChasing", true);
+            Debug.Log("Cheguei aqui - patrol");
+        }
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
