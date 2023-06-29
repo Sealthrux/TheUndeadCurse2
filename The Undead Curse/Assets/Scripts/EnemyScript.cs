@@ -10,13 +10,7 @@ public class EnemyScript : MonoBehaviour
     {
         SphereCol.enabled = false;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("PlayerFist"))
-        {
-            GameManager.instance.TakeDamagePlayer();
-        }
-    }
+    
 
     private void AttackTriggerOn()
     {

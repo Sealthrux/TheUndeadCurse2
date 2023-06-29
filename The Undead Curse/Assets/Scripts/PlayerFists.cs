@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerFists : MonoBehaviour
 {
-    public bool deuDano = false;
+    
     public SphereCollider Fist1;
     public SphereCollider Fist2;
 
@@ -15,21 +15,12 @@ public class PlayerFists : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-    if (other.tag == "Enemy" && !deuDano)
-        {
-            other.gameObject.GetComponent<AttributesManager>().TakeDamage(1);
-            deuDano = true;
-        }
-
-    }
-
     private void AttackTriggerOn()
     {
         Fist1.enabled = true;
         Fist2.enabled = true;
-        deuDano = false;
+        Fist1.gameObject.GetComponent<PlayerFistDamage>().deuDano = false;
+        Fist2.gameObject.GetComponent<PlayerFistDamage>().deuDano = false;
 
     }
 
