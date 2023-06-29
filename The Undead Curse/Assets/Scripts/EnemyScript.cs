@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    public SphereCollider SphereCol;
     private void Awake()
     {
-        GetComponent<SphereCollider>().enabled = false;
+        SphereCol.enabled = false;
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("PlayerFist"))
         {
             GameManager.instance.TakeDamagePlayer();
         }
@@ -19,13 +20,13 @@ public class EnemyScript : MonoBehaviour
 
     private void AttackTriggerOn()
     {
-        GetComponent<SphereCollider>().enabled = true;
+        SphereCol.enabled = true;
 
     }
 
     private void AttackTriggerOff()
     {
-        GetComponent<SphereCollider>().enabled = false;
+        SphereCol.enabled = false;
 
     }
 }

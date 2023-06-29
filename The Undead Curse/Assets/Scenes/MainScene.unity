@@ -5386,43 +5386,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 412634898}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &413025039
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &415148258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12723,6 +12686,11 @@ PrefabInstance:
       propertyPath: CheckPointCam
       value: 
       objectReference: {fileID: 545891238}
+    - target: {fileID: 5037301856396861591, guid: 7f2a18d1230345340862dac6d0ee9c66,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.991
+      objectReference: {fileID: 0}
     - target: {fileID: 5261578929195185601, guid: 7f2a18d1230345340862dac6d0ee9c66,
         type: 3}
       propertyPath: m_RootOrder
@@ -12777,6 +12745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917293626563968900, guid: 7f2a18d1230345340862dac6d0ee9c66,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.893
       objectReference: {fileID: 0}
     - target: {fileID: 9178261206543960018, guid: 7f2a18d1230345340862dac6d0ee9c66,
         type: 3}
@@ -20316,6 +20289,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1719156294}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1719423898
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1722249158
 PrefabInstance:
   m_ObjectHideFlags: 0

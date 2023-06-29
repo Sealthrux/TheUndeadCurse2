@@ -392,6 +392,51 @@ Transform:
   m_Father: {fileID: 6292372475086776101}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1412842167909154424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4056858474659620228}
+  - component: {fileID: 6379330566229682697}
+  m_Layer: 0
+  m_Name: FIST
+  m_TagString: PlayerFist
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4056858474659620228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412842167909154424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.28, y: -0.64, z: 1.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5037301856396861591}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6379330566229682697
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412842167909154424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1461118216507448151
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,10 +776,9 @@ GameObject:
   - component: {fileID: 6917293626563968900}
   - component: {fileID: 6877178453188185701}
   - component: {fileID: 4684355457475717507}
-  - component: {fileID: 5201830008173794244}
   m_Layer: 0
   m_Name: Z_L_ArmPalm
-  m_TagString: Untagged
+  m_TagString: PlayerFist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,10 +791,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3234868044983273263}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3768456174701129470}
   m_Father: {fileID: 5261578929195185601}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -837,19 +882,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!135 &5201830008173794244
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3234868044983273263}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: -0.62525517, y: -0.040961176, z: 1.1071147}
 --- !u!1 &3251893159264145394
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,10 +1028,9 @@ GameObject:
   - component: {fileID: 5037301856396861591}
   - component: {fileID: 4218644454570579036}
   - component: {fileID: 4684355458469762594}
-  - component: {fileID: 5435758996287678362}
   m_Layer: 0
   m_Name: Z_R_ArmPalm
-  m_TagString: Untagged
+  m_TagString: PlayerFist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,7 +1046,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4056858474659620228}
   m_Father: {fileID: 5261578929195185601}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1102,19 +1134,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!135 &5435758996287678362
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3562854070048727097}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0.62524027, y: -0.040961727, z: 1.1071155}
 --- !u!1 &3581535390494476747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,6 +2130,51 @@ Transform:
   m_Father: {fileID: 7779599444980862330}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6113831027748015690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3768456174701129470}
+  - component: {fileID: 6710258434853886620}
+  m_Layer: 0
+  m_Name: FIST
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3768456174701129470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113831027748015690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.28, y: -0.64, z: 1.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6917293626563968900}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6710258434853886620
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113831027748015690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6145898525020423040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3465,6 +3529,7 @@ GameObject:
   - component: {fileID: 4684355457214467875}
   - component: {fileID: 4684355457214467872}
   - component: {fileID: 4684355456558809367}
+  - component: {fileID: 1696291772825183142}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3586,6 +3651,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd03abdbc1c1c244b6ece22d7fd1e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1696291772825183142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9178261206543960018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9359f35d3f821c4fb22676f9b7ceb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deuDano: 0
+  Fist1: {fileID: 6379330566229682697}
+  Fist2: {fileID: 6710258434853886620}
 --- !u!1001 &4684355457627195581
 PrefabInstance:
   m_ObjectHideFlags: 0

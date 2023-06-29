@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerFists : MonoBehaviour
 {
     public bool deuDano = false;
+    public SphereCollider Fist1;
+    public SphereCollider Fist2;
 
     private void Awake()
     {
-        GetComponent<SphereCollider>().enabled = false;
+        Fist1.enabled = false;
+        Fist2.enabled = false;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,14 +27,16 @@ public class PlayerFists : MonoBehaviour
 
     private void AttackTriggerOn()
     {
-        GetComponent<SphereCollider>().enabled = true;
+        Fist1.enabled = true;
+        Fist2.enabled = true;
         deuDano = false;
 
     }
 
     private void AttackTriggerOff()
     {
-        GetComponent<SphereCollider>().enabled = false;
+        Fist1.enabled = false;
+        Fist2.enabled = false;
 
     }
 }
