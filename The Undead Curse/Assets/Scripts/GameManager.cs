@@ -44,11 +44,6 @@ public class GameManager : MonoBehaviour
         MyHUD.TakeDamage();
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        TakeDamagePlayer();
-    }
-
 
     public void Update()
     {
