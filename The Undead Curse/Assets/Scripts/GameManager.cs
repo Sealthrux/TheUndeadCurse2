@@ -35,8 +35,16 @@ public class GameManager : MonoBehaviour
     {
         MyHUD.LifeMax();
 
+
         ObjectiveScript.ObjectiveCheckpoint();
     }
+
+    public void TakeDamagePlayer()
+    {
+        MyHUD.TakeDamage();
+    }
+
+
     public void Update()
     {
       if (ObjectiveScript.ObjectiveComplete() && TimerScript.TimerCheck())

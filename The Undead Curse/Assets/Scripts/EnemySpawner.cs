@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public Vector3 spawnAreaSize;
     public float minSpawnInterval = 1f;
     public float maxSpawnInterval = 3f;
-    public int maxEnemies = 10;
+    public int maxEnemies;
 
     private int enemyCount = 0;
 
