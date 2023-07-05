@@ -11949,14 +11949,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoamRadius: 20
-  Animator: {fileID: 0}
-  agent: {fileID: 0}
+  Animator: {fileID: 95549024643180554}
+  agent: {fileID: 4025092848389873338}
   GroundMask:
     serializedVersion: 2
     m_Bits: 0
   PlayerState: 0
-  WalkSpeed: 0
-  RunSpeed: 0
+  WalkSpeed: 6
+  RunSpeed: 10
 --- !u!1 &1953607639529104
 GameObject:
   m_ObjectHideFlags: 0

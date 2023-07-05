@@ -26,6 +26,8 @@ public class AICrusader : MonoBehaviour
 
     RaycastHit tempInfo;
 
+    List<Transform> wayPoints = new List<Transform>();
+
     [SerializeField]
     private Animator Animator;
 
@@ -39,8 +41,8 @@ public class AICrusader : MonoBehaviour
     State PlayerState;
 
     [SerializeField]
-    float WalkSpeed, RunSpeed;
-    
+    float WalkSpeed,
+        RunSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,12 @@ public class AICrusader : MonoBehaviour
         startPosition = transform.position;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         Animator = agent.GetComponent<Animator>();
+
+        GameObject go = GameObject.FindGameObjectWithTag("WayPoints");
+        foreach (Transform t in go.transform)
+            wayPoints.Add(t);
+
+        agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
     }
 
     // Update is called once per frame
@@ -108,11 +116,13 @@ public class AICrusader : MonoBehaviour
         }
     }
 
-    void Dead() {
-        if(Kill) return;
+    void Dead()
+    {
+        if (Kill)
+            return;
         Kill = true;
         Animator.SetTrigger("isDead");
-     }
+    }
 
     void Attack()
     {
@@ -128,7 +138,8 @@ public class AICrusader : MonoBehaviour
         }
     }
 
-    public void ResetAttack(){
+    public void ResetAttack()
+    {
         Attacked = false;
     }
 
@@ -148,15 +159,10 @@ public class AICrusader : MonoBehaviour
         agent.speed = WalkSpeed;
         Animator.SetBool("isAttacking", false);
         Animator.SetBool("isChasing", false);
-        if (!WalkPointSet)
-            GetNewWayPoint();
-        else
-            agent.SetDestination(WalkPoint);
-
-        Vector3 DistanceToWP = transform.position - WalkPoint;
-        if (DistanceToWP.magnitude < 1f)
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            WalkPointSet = false;
+            Debug.Log("Reached waypoint, setting new destination.");
+            agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
         }
     }
 

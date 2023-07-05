@@ -7,7 +7,6 @@ TagManager:
   - WayPoints
   - CaveCheck
   - Enemy
-  - WayPointsPeasant1
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ public class EnemySpawner : MonoBehaviour
 
     private int enemyCount = 0;
 
+    Vector3 spawnPosition;
+
     private void Start()
     {
         Invoke("SpawnEnemy", Random.Range(minSpawnInterval, maxSpawnInterval));
@@ -20,11 +22,13 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemyCount < maxEnemies)
         {
-            Vector3 spawnPosition = spawnAreaCenter + new Vector3(
-                Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2),
-                Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2),
-                Random.Range(-spawnAreaSize.z / 2, spawnAreaSize.z / 2)
-            );
+            spawnPosition =
+                spawnAreaCenter
+                + new Vector3(
+                    Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2),
+                    Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2),
+                    Random.Range(-spawnAreaSize.z / 2, spawnAreaSize.z / 2)
+                );
 
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
 
