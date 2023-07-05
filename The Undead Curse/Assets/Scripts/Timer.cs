@@ -15,8 +15,8 @@ public class Timer : MonoBehaviour
 
     public void Start()
     {
-        TminutesText = transform.Find("Minutes").GetComponent<TMP_Text>();
-        TsecondsText = transform.Find("Seconds").GetComponent<TMP_Text>();
+        //TminutesText = transform.Find("Minutes").GetComponent<TMP_Text>();
+        //TsecondsText = transform.Find("Seconds").GetComponent<TMP_Text>();
 
     }
 
