@@ -46,12 +46,13 @@ public class PatrolState : StateMachineBehaviour
         if (distance < chaseRange)
         {
             animator.SetBool("isChasing", true);
+            Debug.Log("Cheguei aqui - patrol");
         }
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(animator.transform.position);
+        agent.SetDestination(agent.transform.position);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

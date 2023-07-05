@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     public Objective ObjectiveScript;
     public Timer TimerScript;
 
-    public GameObject Player;
-
     public void Awake()
     {
         if (instance != null && instance != this)
