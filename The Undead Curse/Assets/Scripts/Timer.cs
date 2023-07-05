@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     public TMP_Text TminutesText;
     public TMP_Text TsecondsText;
     public float TcurrentTime;
-    
+    public GameObject TimedMessage;
 
     public void Start()
     {
@@ -39,6 +39,11 @@ public class Timer : MonoBehaviour
             if (TcurrentTime <= 0)
             {
                 TcurrentTime = 0;
+            }
+
+            if (TcurrentTime <= 120)
+            {
+                TimedMessage.SetActive(true);
             }
         }
         
