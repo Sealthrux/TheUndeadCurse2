@@ -11824,6 +11824,7 @@ GameObject:
   - component: {fileID: 7282998063102424533}
   - component: {fileID: 4025092848389873338}
   - component: {fileID: 6840915076207852370}
+  - component: {fileID: 6693134422297996925}
   m_Layer: 0
   m_Name: Crusader tank_prefab
   m_TagString: Enemy
@@ -11935,6 +11936,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd03abdbc1c1c244b6ece22d7fd1e97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6693134422297996925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949430161825482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49fa1b9e90e3af439065ccc82c364a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoamRadius: 20
+  Animator: {fileID: 0}
+  agent: {fileID: 0}
+  GroundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  PlayerState: 0
+  WalkSpeed: 0
+  RunSpeed: 0
 --- !u!1 &1953607639529104
 GameObject:
   m_ObjectHideFlags: 0
