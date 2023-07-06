@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttributesManager : MonoBehaviour
 {
-    private int health = 4;
+    private int health = 6;
     public void TakeDamage(int amount)
     {
         health -= amount;
