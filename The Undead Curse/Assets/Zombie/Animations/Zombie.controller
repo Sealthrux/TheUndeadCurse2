@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cf5cf530a99f2d4cb807521e3803e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  player: {fileID: 0}
+  chaseRange: 40
 --- !u!1101 &-6218706357609436203
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -159,8 +162,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2178462340958681166}
-  m_StateMachineBehaviours:
-  - {fileID: -8395988292442880333}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
