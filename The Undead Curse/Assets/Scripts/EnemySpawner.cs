@@ -30,7 +30,5 @@ public class EnemySpawner : MonoBehaviour
 
             enemyCount++;
         }
-
-        Invoke("SpawnEnemy", Random.Range(minSpawnInterval, maxSpawnInterval));
     }
 }
