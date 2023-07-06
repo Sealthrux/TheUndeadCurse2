@@ -8,6 +8,7 @@ TagManager:
   - CaveCheck
   - Enemy
   - PlayerFist
+  - EnemyPeasant
   layers:
   - Default
   - TransparentFX

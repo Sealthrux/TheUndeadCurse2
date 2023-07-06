@@ -16,5 +16,11 @@ public class PlayerFistDamage : MonoBehaviour
             deuDano = true;
         }
 
+
+        if (other.tag == "EnemyPeasant" && !deuDano)
+        {
+            other.gameObject.GetComponent<AttributesManagerPeasant>().TakeDamagePeasant(1);
+            deuDano = true;
+        }
     }
 }

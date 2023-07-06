@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
         MyHUD.TakeDamage();
     }
 
+    public void TakeDamage2Player()
+    {
+        MyHUD.TakeDamage2();
+    }
+
 
     public void Update()
     {
