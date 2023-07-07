@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class PlayerFistDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("deu punheta ao barreto");
+
         if (other.tag == "Enemy" && !deuDano)
         {
             other.gameObject.GetComponent<AttributesManager>().TakeDamage(1);
