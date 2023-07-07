@@ -5,26 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Restart_button : MonoBehaviour
 {
-   public string menuSceneName; 
-    public string mainSceneName;
-
-    private void Start()
+    public void RestartButton()
     {
-        
-        UnityEngine.UI.Button restartButton = GameObject.Find("RestartButton").GetComponent<UnityEngine.UI.Button>();
-        restartButton.onClick.AddListener(RestartGame);
-
-        UnityEngine.UI.Button menuButton = GameObject.Find("MenuButton").GetComponent<UnityEngine.UI.Button>();
-        menuButton.onClick.AddListener(GoToMenu);
+        SceneManager.LoadScene("MainScene");
     }
 
-    private void RestartGame()
-    {
-        SceneManager.LoadScene(mainSceneName);
-    }
-
-    private void GoToMenu()
-    {
-        SceneManager.LoadScene(menuSceneName);
+    public void ExitButton(){
+        SceneManager.LoadScene("Menu");
     }
 }
