@@ -11,7 +11,7 @@ public class HUDScript : MonoBehaviour
 
     public GameObject HEALTHBAR;
     public GameObject HPBarPrefab;
-    public GameObject DeathMenu;
+    public string DeathScene;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class HUDScript : MonoBehaviour
 
         if (lives == 0)
         {
-            DeathMenu.SetActive(true);
+            SceneManager.LoadScene(DeathScene);
         }
     }
 
