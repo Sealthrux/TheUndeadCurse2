@@ -967,7 +967,6 @@ GameObject:
   - component: {fileID: 1824335564662334945}
   - component: {fileID: 1812980420471135241}
   - component: {fileID: 1805000276219221751}
-  - component: {fileID: 1852845031594298789}
   m_Layer: 0
   m_Name: Pitchfork
   m_TagString: Untagged
@@ -1040,19 +1039,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1852845031594298789
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826910676865658865}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.34431165, y: 0.104997486, z: 1.617005}
-  m_Center: {x: -0.0067713633, y: 0.00045246072, z: 0.5740083}
 --- !u!1 &1826924709043869003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,7 +1775,7 @@ GameObject:
   - component: {fileID: 1823715931021520162}
   - component: {fileID: 3050252530277511103}
   - component: {fileID: -5965052742732728331}
-  - component: {fileID: 3092123208686070217}
+  - component: {fileID: 4289246644884871480}
   m_Layer: 0
   m_Name: Peasant
   m_TagString: EnemyPeasant
@@ -1916,11 +1902,11 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &3092123208686070217
+--- !u!136 &4289246644884871480
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1930,10 +1916,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.7
-  m_Height: 3
+  m_Radius: 0.5
+  m_Height: 1.6739568
   m_Direction: 1
-  m_Center: {x: 0, y: 0.84, z: 0}
+  m_Center: {x: 0, y: 1.2401888, z: 0}
 --- !u!1 &1827217494303041639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2546,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1411354271446523478}
   - component: {fileID: 5341407558929252923}
-  - component: {fileID: 6794256448393460801}
   m_Layer: 0
   m_Name: sphereCol
   m_TagString: Untagged
@@ -2596,15 +2581,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6794256448393460801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5564774134734491578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5633350daa9efd64fb6969cc27086c6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
