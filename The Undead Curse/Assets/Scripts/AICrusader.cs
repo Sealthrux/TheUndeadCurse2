@@ -12,8 +12,8 @@ public class AICrusader : MonoBehaviour
         Dead
     };
 
-    public float RoamRadius = 20f;
-    float chaseRange = 25f;
+    public float RoamRadius = 100f;
+    float chaseRange = 80f;
     float attackRange = 10f;
 
     bool WalkPointSet;
