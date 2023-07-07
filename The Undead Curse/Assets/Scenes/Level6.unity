@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.01879043, g: 0.021776965, b: 0.026621206, a: 1}
+  m_IndirectSpecularColor: {r: 0.018790431, g: 0.021776965, b: 0.02662121, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8209,43 +8209,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 659015519}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &671659005
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1001 &677164453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17717,6 +17680,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1019195720}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1044606790
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1045396343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18626,6 +18626,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1074117564}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1082405881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082405880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba049df8257e2af4eb42ecba1e3e37ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointplayed: 0
+  PlayerCam: {fileID: 1045652214}
+  CheckPointCam: {fileID: 545891238}
+  NextScene: 8
 --- !u!1001 &1087366584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21486,7 +21502,6 @@ GameObject:
   - component: {fileID: 1357286201}
   - component: {fileID: 1357286200}
   - component: {fileID: 1357286203}
-  - component: {fileID: 1357286204}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -21573,22 +21588,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.50000006
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1357286204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357286198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba049df8257e2af4eb42ecba1e3e37ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointplayed: 0
-  PlayerCam: {fileID: 1045652214}
-  CheckPointCam: {fileID: 545891238}
-  NextScene: 8
 --- !u!1 &1358912885
 GameObject:
   m_ObjectHideFlags: 0

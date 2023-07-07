@@ -13266,7 +13266,6 @@ GameObject:
   - component: {fileID: 5261578929195185601}
   - component: {fileID: 2850464005390031035}
   - component: {fileID: 4684355457214467873}
-  - component: {fileID: 4684355457214467875}
   - component: {fileID: 4684355457214467872}
   - component: {fileID: 4684355456558809367}
   - component: {fileID: 1696291772825183142}
@@ -13347,22 +13346,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &4684355457214467875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9178261206543960018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba049df8257e2af4eb42ecba1e3e37ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointplayed: 0
-  PlayerCam: {fileID: 4684355457829520686}
-  CheckPointCam: {fileID: 0}
-  NextScene: 
 --- !u!114 &4684355457214467872
 MonoBehaviour:
   m_ObjectHideFlags: 0

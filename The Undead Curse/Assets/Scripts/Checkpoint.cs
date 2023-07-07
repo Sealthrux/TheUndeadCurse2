@@ -24,8 +24,8 @@ public class Checkpoint : MonoBehaviour
             checkpointplayed = true;
             PlayerCam.SetActive(false);
             CheckPointCam.SetActive(true);
-            //Invoke("SwitchToPlayerCam", 6f);
-            SwitchToPlayerCam();
+            Invoke("SwitchToPlayerCam", 6f);
+            //SwitchToPlayerCam();
         }
     }
 
