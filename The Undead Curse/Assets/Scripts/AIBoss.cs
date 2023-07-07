@@ -14,8 +14,8 @@ public class AIBoss : MonoBehaviour
     };
 
     public float RoamRadius = 20f;
-    float chaseRange = 25f;
-    float attackRange = 10f;
+    float chaseRange = 250f;
+    float attackRange = 60f;
 
     bool WalkPointSet;
     bool Attacked;
@@ -40,8 +40,8 @@ public class AIBoss : MonoBehaviour
     State PlayerState;
 
     [SerializeField]
-    float WalkSpeed, RunSpeed;
-    
+    float WalkSpeed,
+        RunSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -82,9 +82,11 @@ public class AIBoss : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(WalkPoint, .5f);
-        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(WalkPoint, 1f);
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
     void HandleBehaviour()
@@ -109,11 +111,13 @@ public class AIBoss : MonoBehaviour
         }
     }
 
-    void Dead() {
-        if(Kill) return;
+    void Dead()
+    {
+        if (Kill)
+            return;
         Kill = true;
         Animator.SetTrigger("isDead");
-     }
+    }
 
     void Attack()
     {
@@ -129,15 +133,9 @@ public class AIBoss : MonoBehaviour
         }
     }
 
-    public void ResetAttack(){
-        Attacked = false;
-    }
-
     void Chasing()
     {
         agent.speed = RunSpeed;
-        Animator.SetBool("isChasing", true);
-        Animator.SetBool("isAttacking", false);
         agent.SetDestination(destiny);
         Vector3 direction = (destiny - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
@@ -148,7 +146,6 @@ public class AIBoss : MonoBehaviour
     {
         agent.speed = WalkSpeed;
         Animator.SetBool("isAttacking", false);
-        Animator.SetBool("isChasing", false);
         if (!WalkPointSet)
             GetNewWayPoint();
         else
@@ -172,7 +169,7 @@ public class AIBoss : MonoBehaviour
         {
             WalkPoint = tempInfo.point;
             WalkPointSet = true;
-            //Debug.Log(WalkPoint + ": waypoint");
+            Debug.Log(WalkPoint + ": waypoint");
         }
         else
         {
