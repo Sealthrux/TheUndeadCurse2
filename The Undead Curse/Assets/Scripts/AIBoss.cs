@@ -13,9 +13,9 @@ public class AIBoss : MonoBehaviour
         Dead
     };
 
-    public float RoamRadius = 20f;
-    float chaseRange = 250f;
-    float attackRange = 60f;
+    public float RoamRadius = 250f;
+    float chaseRange = 200f;
+    float attackRange = 40f;
 
     bool WalkPointSet;
     bool Attacked;
@@ -82,7 +82,7 @@ public class AIBoss : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(WalkPoint, 1f);
+        Gizmos.DrawSphere(WalkPoint, 1f);
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.color = Color.red;
@@ -133,9 +133,16 @@ public class AIBoss : MonoBehaviour
         }
     }
 
+    public void ResetAttack()
+    {
+        Attacked = false;
+    }
+
     void Chasing()
     {
         agent.speed = RunSpeed;
+        Animator.SetBool("isChasing", true);
+        Animator.SetBool("isAttacking", false);
         agent.SetDestination(destiny);
         Vector3 direction = (destiny - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
@@ -146,6 +153,7 @@ public class AIBoss : MonoBehaviour
     {
         agent.speed = WalkSpeed;
         Animator.SetBool("isAttacking", false);
+        Animator.SetBool("isChasing", false);
         if (!WalkPointSet)
             GetNewWayPoint();
         else

@@ -23,7 +23,7 @@ public class HUDScript : MonoBehaviour
     {
         HPBarUpdate();
 
-        if (lives == 0)
+        if (lives <= 0)
         {
             SceneManager.LoadScene(DeathScene);
         }
@@ -44,7 +44,11 @@ public class HUDScript : MonoBehaviour
 
     public void HPBarUpdate()
     {
-        if (HEALTHBAR.transform.childCount > lives)
+        if (lives <= 0)
+        {
+            return;
+        }
+            if (HEALTHBAR.transform.childCount > lives)
         {
             float healthtemp = HEALTHBAR.transform.childCount - lives;
 
@@ -80,6 +84,8 @@ public class HUDScript : MonoBehaviour
     }
     public void TakeDamageBoss()
     {
-        lives = lives - 4;
+        lives = lives - 1;
+        lives = lives - 1;
+        lives = lives - 1;
     }
 }
