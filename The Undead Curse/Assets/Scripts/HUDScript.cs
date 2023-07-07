@@ -15,7 +15,7 @@ public class HUDScript : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -44,16 +44,16 @@ public class HUDScript : MonoBehaviour
 
     public void HPBarUpdate()
     {
-        if ( HEALTHBAR.transform.childCount > lives)
+        if (HEALTHBAR.transform.childCount > lives)
         {
             float healthtemp = HEALTHBAR.transform.childCount - lives;
-            
+
             for (int i = 0; i < healthtemp; i++)
             {
                 GameObject.Destroy(HEALTHBAR.transform.GetChild(HEALTHBAR.transform.childCount - i - 1).gameObject);
             }
         }
-        else if (HEALTHBAR.transform.childCount < lives) 
+        else if (HEALTHBAR.transform.childCount < lives)
         {
             float healthtemp2 = lives - HEALTHBAR.transform.childCount;
 
@@ -76,6 +76,10 @@ public class HUDScript : MonoBehaviour
 
     public void TakeDamage2()
     {
-        lives = lives -2;
+        lives = lives - 2;
+    }
+    public void TakeDamageBoss()
+    {
+        lives = lives - 4;
     }
 }

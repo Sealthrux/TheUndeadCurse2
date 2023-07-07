@@ -22,5 +22,11 @@ public class PlayerFistDamage : MonoBehaviour
             other.gameObject.GetComponent<AttributesManagerPeasant>().TakeDamagePeasant(1);
             deuDano = true;
         }
+
+        if (other.tag == "EnemyBoss" && !deuDano)
+        {
+            other.gameObject.GetComponent<AttributesManagerBoss>().TakeDamageBoss(1);
+            deuDano = true;
+        }
     }
 }

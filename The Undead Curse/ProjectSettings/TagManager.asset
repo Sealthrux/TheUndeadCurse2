@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - PlayerFist
   - EnemyPeasant
+  - EnemyBoss
   layers:
   - Default
   - TransparentFX
