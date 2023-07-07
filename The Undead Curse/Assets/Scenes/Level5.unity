@@ -18539,6 +18539,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2a18d1230345340862dac6d0ee9c66, type: 3}
+--- !u!1 &1074117565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4684355457829520686, guid: 7f2a18d1230345340862dac6d0ee9c66,
+    type: 3}
+  m_PrefabInstance: {fileID: 1074117564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1081119279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21613,6 +21619,7 @@ GameObject:
   - component: {fileID: 1357286201}
   - component: {fileID: 1357286200}
   - component: {fileID: 1357286203}
+  - component: {fileID: 1357286204}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -21699,6 +21706,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.50000006
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1357286204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357286198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba049df8257e2af4eb42ecba1e3e37ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointplayed: 0
+  PlayerCam: {fileID: 1074117565}
+  CheckPointCam: {fileID: 545891238}
+  NextScene: Level6
 --- !u!1 &1358912885
 GameObject:
   m_ObjectHideFlags: 0
