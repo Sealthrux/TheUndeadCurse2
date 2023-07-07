@@ -11,7 +11,6 @@ public class PlayerFistDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("deu punheta ao barreto");
 
         if (other.tag == "Enemy" && !deuDano)
         {

@@ -8,7 +8,7 @@ public class Checkpoint : MonoBehaviour
     public bool checkpointplayed = false;
     public GameObject PlayerCam;
     public GameObject CheckPointCam;
-    public string NextScene;
+    public int NextScene;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,8 @@ public class Checkpoint : MonoBehaviour
             checkpointplayed = true;
             PlayerCam.SetActive(false);
             CheckPointCam.SetActive(true);
-            Invoke("SwitchToPlayerCam", 6f);
+            //Invoke("SwitchToPlayerCam", 6f);
+            SwitchToPlayerCam();
         }
     }
 
