@@ -27843,7 +27843,7 @@ MonoBehaviour:
   redColor: {r: 1, g: 0, b: 0, a: 1}
   TminutesText: {fileID: 298593595}
   TsecondsText: {fileID: 937057942}
-  TcurrentTime: 300
+  TcurrentTime: 270
   TimedMessage: {fileID: 1054489923}
 --- !u!1001 &1933799562
 PrefabInstance:
