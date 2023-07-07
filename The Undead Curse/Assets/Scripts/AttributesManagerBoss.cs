@@ -6,15 +6,20 @@ using UnityEngine.SceneManagement;
 public class AttributesManagerBoss : MonoBehaviour
 {
     Animator animator;
-    private int health = 10;
-    public string WinScene;
+    private int health = 3;
+    public int WinScene;
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     public void TakeDamageBoss(int amount)
     {
         health -= amount;
 
         if (health <= 0)
         {
-            animator.SetTrigger("isDead");
+            animator.SetTrigger("isDeadBoss");
         }
     }
 
@@ -22,7 +27,7 @@ public class AttributesManagerBoss : MonoBehaviour
     private void Disappear()
     {
         Destroy(gameObject);
-        Invoke("FinalBossWin", 6f);
+        FinalBossWin();
     }
 
     private void FinalBossWin()

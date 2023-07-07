@@ -6,13 +6,20 @@ public class AttributesManager : MonoBehaviour
 {
     Animator animator;
     private int health = 3;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+
     public void TakeDamage(int amount)
     {
         health -= amount;
 
         if (health <= 0)
         {
-            animator.SetTrigger("isDead");
+            animator.SetTrigger("isDeadMerc");
         }
     }
 
