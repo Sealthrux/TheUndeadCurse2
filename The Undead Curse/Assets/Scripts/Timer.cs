@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour
 
     public bool TimerCheck()
     {
-        if (TcurrentTime <= 60)
+        if (TcurrentTime <= 120)
         {
             return true;
         }
