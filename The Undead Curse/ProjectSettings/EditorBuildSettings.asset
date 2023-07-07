@@ -9,11 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: f05e8d90ac844a24abe4c4b79e7b2ed4
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/CutsceneInicial.unity
     guid: e866f7cb09f6cf04ab46b4e6da26cd9f
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 268165561e87e414499c7dc9e48bac9a
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 9de28e115feee8641b752b206eed25ca
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 9c76ba2b1e629974da522dcbc0ec78aa
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: ffb0e76da495e0946af4e1564b0e76e6
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 39eeaa3f607bbb440b36df1eb756f39e
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 3823d4915a8fcbe45a312362d1441b75
+  - enabled: 1
+    path: Assets/Scenes/FinalLevel.unity
+    guid: bd59ba17e6d691e4eace0c97abbfcf62
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 3a718ca625525498a81e7465d5702099
