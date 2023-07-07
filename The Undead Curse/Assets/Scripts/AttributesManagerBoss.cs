@@ -1,27 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AttributesManagerBoss : MonoBehaviour
 {
-    private int health = 24;
+    Animator animator;
+    private int health = 10;
+    public string WinScene;
     public void TakeDamageBoss(int amount)
     {
         health -= amount;
 
         if (health <= 0)
         {
-            // Chamada para a função que faz o GameObject desaparecer
-           Disappear();
+            animator.SetTrigger("isDead");
         }
     }
 
 
     private void Disappear()
     {
-        // Desativa o GameObject
         Destroy(gameObject);
+        Invoke("FinalBossWin", 6f);
     }
 
-  
+    private void FinalBossWin()
+    {
+        SceneManager.LoadScene(WinScene);
+    }
 }

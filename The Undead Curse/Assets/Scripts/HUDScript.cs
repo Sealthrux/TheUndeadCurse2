@@ -80,6 +80,8 @@ public class HUDScript : MonoBehaviour
     }
     public void TakeDamageBoss()
     {
-        lives = lives - 4;
+        lives = lives - 1;
+        lives = lives - 1;
+        lives = lives - 1;
     }
 }
