@@ -13,8 +13,8 @@ public class AIPeasant : MonoBehaviour
         Dead
     };
 
-    public float RoamRadius = 20f;
-    float chaseRange = 150f;
+    public float RoamRadius = 80f;
+    float chaseRange = 60f;
     float attackRange = 10f;
 
     bool WalkPointSet;
