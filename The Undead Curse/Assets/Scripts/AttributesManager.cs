@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class AttributesManager : MonoBehaviour
 {
-    private int health = 6;
+    Animator animator;
+    private int health = 3;
     public void TakeDamage(int amount)
     {
         health -= amount;
 
         if (health <= 0)
         {
-            // Chamada para a função que faz o GameObject desaparecer
-           Disappear();
+            animator.SetTrigger("isDead");
         }
     }
 

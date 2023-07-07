@@ -11797,8 +11797,8 @@ GameObject:
   - component: {fileID: 3028316860744922378}
   - component: {fileID: 7282998063102424533}
   - component: {fileID: 4025092848389873338}
-  - component: {fileID: 6840915076207852370}
   - component: {fileID: 6693134422297996925}
+  - component: {fileID: 6840915076207852370}
   - component: {fileID: 8421691835601933943}
   m_Layer: 0
   m_Name: Crusader tank_prefab
@@ -11899,18 +11899,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6840915076207852370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949430161825482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd03abdbc1c1c244b6ece22d7fd1e97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6693134422297996925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11932,6 +11920,18 @@ MonoBehaviour:
   PlayerState: 0
   WalkSpeed: 6
   RunSpeed: 10
+--- !u!114 &6840915076207852370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949430161825482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd03abdbc1c1c244b6ece22d7fd1e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8421691835601933943
 MonoBehaviour:
   m_ObjectHideFlags: 0

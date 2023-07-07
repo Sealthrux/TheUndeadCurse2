@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttributesManagerPeasant : MonoBehaviour
 {
     Animator animator;
-    private int health = 4;
+    private int health = 2;
 
     private void Start()
     {
