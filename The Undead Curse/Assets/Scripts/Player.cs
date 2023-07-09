@@ -18,6 +18,12 @@ public class Player : MonoBehaviour
     public float sensitivity;
     public Camera eyes;
 
+    [SerializeField]
+    AudioSource walksteps;
+
+    [SerializeField]
+    AudioSource zombieattack;
+
     private Vector3 moveDirection = Vector3.zero; //Vector que controla a direcção do movimento
 
     /*private void OnTriggerEnter(Collider other)
@@ -53,6 +59,7 @@ public class Player : MonoBehaviour
         {
             //animator.SetTrigger("Z_Attack"); // Aciona o gatilho "Ataque" na animação
             animator.Play("Z_Attack");
+            zombieattack.Play();
         }
 
 
@@ -72,15 +79,17 @@ public class Player : MonoBehaviour
             // Verifica a magnitude do movimento para determinar a velocidade da animação
             float movementMagnitude = moveDirection.magnitude;
             animator.SetFloat("Speed", movementMagnitude); // Define o parâmetro "Speed" do Animator
-
             // Verifica se o personagem está parado (magnitude do movimento próxima de zero)
             moveDirection = transform.TransformDirection(moveDirection);
+            if(movementMagnitude < 0.01)
+            {
+                walksteps.Play();
+            }
         }
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
         moveDirection.y -= gravity * Time.deltaTime;
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
-
     }
 }
