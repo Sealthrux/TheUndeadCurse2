@@ -1842,8 +1842,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   PlayerState: 0
-  WalkSpeed: 3
-  RunSpeed: 6
+  WalkSpeed: 5
+  RunSpeed: 12
 --- !u!195 &1828169315006574824
 NavMeshAgent:
   m_ObjectHideFlags: 0

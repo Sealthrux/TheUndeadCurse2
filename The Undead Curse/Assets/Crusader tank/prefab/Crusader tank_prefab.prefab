@@ -11920,7 +11920,7 @@ MonoBehaviour:
     m_Bits: 128
   PlayerState: 0
   WalkSpeed: 6
-  RunSpeed: 10
+  RunSpeed: 15
 --- !u!114 &6840915076207852370
 MonoBehaviour:
   m_ObjectHideFlags: 0
