@@ -21,8 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     AudioSource walksteps;
 
-    [SerializeField]
-    AudioSource zombieattack;
+
 
     private Vector3 moveDirection = Vector3.zero; //Vector que controla a direcção do movimento
 
@@ -59,7 +58,6 @@ public class Player : MonoBehaviour
         {
             //animator.SetTrigger("Z_Attack"); // Aciona o gatilho "Ataque" na animação
             animator.Play("Z_Attack");
-            zombieattack.Play();
         }
 
 

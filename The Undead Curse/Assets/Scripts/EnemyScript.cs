@@ -6,6 +6,9 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     public SphereCollider SphereCol;
+
+    [SerializeField]
+    private AudioSource deathsound;
     private void Awake()
     {
         SphereCol.enabled = false;
@@ -23,4 +26,9 @@ public class EnemyScript : MonoBehaviour
         SphereCol.enabled = false;
 
     }
+    private void DeathSoundFun()
+    {
+        deathsound.Play();
+    }
+    
 }
