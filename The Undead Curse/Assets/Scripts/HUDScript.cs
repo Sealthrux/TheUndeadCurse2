@@ -25,6 +25,7 @@ public class HUDScript : MonoBehaviour
 
         if (lives <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(DeathScene);
         }
     }
