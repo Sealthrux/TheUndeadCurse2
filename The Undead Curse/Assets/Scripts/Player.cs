@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>(); //Ir buscar o componente ao gameObject
         animator = GetComponent<Animator>(); // Obtém o componente Animator anexado ao GameObject
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

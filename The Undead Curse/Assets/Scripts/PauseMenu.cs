@@ -15,10 +15,14 @@ public class PauseMenu : MonoBehaviour
         {
             if(GameIsPaused)
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 Resume();
-            }else
+                
+            }
+            else
             {
                 Pause();
+                Cursor.lockState = CursorLockMode.None;
             }
         }
         

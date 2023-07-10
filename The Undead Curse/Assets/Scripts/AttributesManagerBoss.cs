@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class AttributesManagerBoss : MonoBehaviour
 {
     Animator animator;
-    private int health = 3;
+    private int health = 6;
     public int WinScene;
     private void Start()
     {
@@ -33,5 +33,6 @@ public class AttributesManagerBoss : MonoBehaviour
     private void FinalBossWin()
     {
         SceneManager.LoadScene(WinScene);
+        Cursor.lockState = CursorLockMode.None;
     }
 }
